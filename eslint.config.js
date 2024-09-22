@@ -4,7 +4,7 @@ import stylistic from "@stylistic/eslint-plugin"
 // @ts-expect-error - can't find type declarations for "@typescript-eslint/parser"
 import parserTs from "@typescript-eslint/parser"
 const includes = ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.mjs", "**/*.cjs"]
-const ignores = ["dist/**/*"]
+const ignores = ["dist/**/*", "node_modules"]
 const indent = 4
 const styleRules = {
     "@stylistic/array-bracket-newline": ["error", "consistent"],
@@ -12,7 +12,7 @@ const styleRules = {
     "@stylistic/array-element-newline": ["error", "consistent"],
     "@stylistic/arrow-parens": ["error", "always"],
     "@stylistic/arrow-spacing": ["error", {before: true, after: true}],
-    "@stylistic/block-spacing": ["error", "always"],
+    "@stylistic/block-spacing": "off",
     "@stylistic/brace-style": ["error", "1tbs"],
     "@stylistic/comma-dangle": ["error", "always-multiline"],
     "@stylistic/comma-spacing": ["error", {before: false, after: true}],

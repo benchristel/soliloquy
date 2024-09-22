@@ -5,7 +5,7 @@ import {
     getAllTests,
     runTests,
     formatTestResultsAsText,
-    type TestResult
+    type TestResult,
 } from "@benchristel/taste"
 
 const testPaths = join(__dirname, "..", "src", "**", "*.test.ts")
