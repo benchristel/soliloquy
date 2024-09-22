@@ -1,12 +1,12 @@
 import {render, h} from "preact"
-import { Project } from "../src/project.js"
-import { trimMargin } from "@benchristel/taste"
+import {Project} from "../src/project.js"
+import {trimMargin} from "@benchristel/taste"
 
 const project = new Project({
     "index.ts": trimMargin`
         const message: number = "Hello, world!"
         console.log(message)
-    `
+    `,
 })
 
 const errors = project.getTypeErrors()

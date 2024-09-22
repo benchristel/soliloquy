@@ -12,7 +12,6 @@ export class InMemoryCompilerHost implements CompilerHost {
         return createSourceFile(fileName, this.files[fileName], languageVersionOrOptions)
     }
     getDefaultLibFileName(options: CompilerOptions): string {
-        // TODO: bring in whatever lib files are needed from node_modules/typescript/lib/.
         return "lib.d.ts"
     }
     writeFile() {
@@ -30,54 +29,10 @@ export class InMemoryCompilerHost implements CompilerHost {
     getNewLine(): string {
         throw new Error("getNewLine not implemented.")
     }
-    // readDirectory?(rootDir: string, extensions: readonly string[], excludes: readonly string[] | undefined, includes: readonly string[], depth?: number | undefined): string[] {
-    //     throw new Error("Method not implemented.");
-    // }
-    // resolveModuleNames?(moduleNames: string[], containingFile: string, reusedNames: string[] | undefined, redirectedReference: ResolvedProjectReference | undefined, options: CompilerOptions, containingSourceFile?: SourceFile | undefined): (ResolvedModule | undefined)[] {
-    //     throw new Error("Method not implemented.");
-    // }
-    // getModuleResolutionCache?(): ModuleResolutionCache | undefined {
-    //     throw new Error("Method not implemented.");
-    // }
-    // resolveTypeReferenceDirectives?(typeReferenceDirectiveNames: string[] | readonly FileReference[], containingFile: string, redirectedReference: ResolvedProjectReference | undefined, options: CompilerOptions, containingFileMode?: ResolutionMode): (ResolvedTypeReferenceDirective | undefined)[] {
-    //     throw new Error("Method not implemented.");
-    // }
-    // resolveModuleNameLiterals?(moduleLiterals: readonly StringLiteralLike[], containingFile: string, redirectedReference: ResolvedProjectReference | undefined, options: CompilerOptions, containingSourceFile: SourceFile, reusedNames: readonly StringLiteralLike[] | undefined): readonly ResolvedModuleWithFailedLookupLocations[] {
-    //     throw new Error("Method not implemented.");
-    // }
-    // resolveTypeReferenceDirectiveReferences?<T extends string | FileReference>(typeDirectiveReferences: readonly T[], containingFile: string, redirectedReference: ResolvedProjectReference | undefined, options: CompilerOptions, containingSourceFile: SourceFile | undefined, reusedNames: readonly T[] | undefined): readonly ResolvedTypeReferenceDirectiveWithFailedLookupLocations[] {
-    //     throw new Error("Method not implemented.");
-    // }
-    // getEnvironmentVariable?(name: string): string | undefined {
-    //     throw new Error("Method not implemented.");
-    // }
-    // hasInvalidatedResolutions?(filePath: Path): boolean {
-    //     throw new Error("Method not implemented.");
-    // }
-    // createHash?(data: string): string {
-    //     throw new Error("Method not implemented.");
-    // }
-    // getParsedCommandLine?(fileName: string): ParsedCommandLine | undefined {
-    //     throw new Error("Method not implemented.");
-    // }
-    // jsDocParsingMode?: JSDocParsingMode | undefined;
     fileExists(fileName: string): boolean {
         return false
     }
     readFile(fileName: string): string | undefined {
         throw new Error("readFile not implemented.")
     }
-    // trace?(s: string): void {
-    //     throw new Error("Method not implemented.");
-    // }
-    // directoryExists?(directoryName: string): boolean {
-    //     throw new Error("Method not implemented.");
-    // }
-    // realpath?(path: string): string {
-    //     throw new Error("Method not implemented.");
-    // }
-    // getDirectories?(path: string): string[] {
-    //     throw new Error("Method not implemented.");
-    // }
-
 }
